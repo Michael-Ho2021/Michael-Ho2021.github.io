@@ -1,0 +1,39 @@
+var listofnumber = [1,4,5,7,0];
+listofnumber.push(10)
+console.log(listofnumber);
+listofnumber[0] = 99;
+console.log(listofnumber)
+listofnumber[2] = 100;
+console.log(listofnumber)
+delete listofnumber[1];
+console.log(listofnumber)
+var listofnumber = listofnumber.length;
+console.log(listofnumber)
+
+let listofwords = ["hello", "my", "name", "is", "Mr.Ho"]
+let i;
+for(i = 0; i < listofwords.length; i++)
+{console.log(listofwords[i])}
+
+let testCase1 = "3x5"
+let testCase2 = "5+9"
+let testCase3 = "7-3"
+function calculator(stringInput)
+{let listofcalculatoritems = stringInput.split("")
+console.log(listofcalculatoritems)
+let operator = listofcalculatoritems[1];
+console.log(operator)
+let firstnumber = parseInt(listofcalculatoritems[0]);
+let secondnumber = parseInt(listofcalculatoritems[2])
+let result;
+if(operator == "x"){result = firstnumber * secondnumber;} 
+else if (operator == "/"){result = firstnumber / secondnumber;}
+else if (operator == "+"){result = firstnumber + secondnumber;}
+else if (operator == "-"){result = firstnumber - secondnumber;}
+return result;}
+
+
+console.log(calculator(testCase1) == 15)
+console.log(calculator(testCase2) == 14)
+console.log(calculator(testCase3) == 4)
+console.log(calculator("10+10") == 20)
